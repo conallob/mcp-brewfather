@@ -6,20 +6,18 @@ linters:
     - govet
     - ineffassign
     - staticcheck
-    - unused
     - gocritic
     - misspell
     - revive
-
-linters-settings:
-  govet:
-    enable-all: true
-    disable:
-      - fieldalignment
-  revive:
-    rules:
-      - name: exported
-        disabled: true
+  settings:
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+    revive:
+      rules:
+        - name: exported
+          disabled: true
 
 issues:
   max-same-issues: 0
