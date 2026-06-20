@@ -60,7 +60,7 @@ func (c *Client) get(ctx context.Context, path string, query url.Values, result 
 	if err != nil {
 		return fmt.Errorf("execute request: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {

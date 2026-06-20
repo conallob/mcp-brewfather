@@ -96,7 +96,7 @@ func TestListRecipesTool_Pagination(t *testing.T) {
 		t.Fatalf("unexpected error: %s", textContent(result))
 	}
 	text := textContent(result)
-	if !strings.Contains(text, "[]") && !strings.Contains(text, "null") && text != "[]" {
-		// OK if empty array or null
+	if !strings.Contains(text, "[]") && text != "null" {
+		t.Errorf("expected empty array result, got %q", text)
 	}
 }
