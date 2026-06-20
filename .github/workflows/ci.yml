@@ -21,8 +21,10 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
-      - name: Vet
-        run: go vet ./...
+      - name: Lint
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
 
       - name: Test with coverage
         run: go test -race -coverprofile=coverage.out -covermode=atomic ./...
