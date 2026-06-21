@@ -74,7 +74,7 @@ brews:
     homepage: "https://github.com/conallob/mcp-brewfather"
     description: "MCP server for the Brewfather homebrewing API"
     license: "MIT"
-    folder: Formula
+    directory: Formula
     repository:
       owner: conallob
       name: homebrew-taps
